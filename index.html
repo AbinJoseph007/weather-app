@@ -8,117 +8,94 @@
     <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/aU3e8b1uXZkVIpYQqpZ9iNobzTqsJ3Zpwar-VxCjLV-IjCpKkjNVMDrXsoiZ4SiHYw" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Additional CSS styles if needed */
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/031/695/101/small/rain-water-drops-on-glass-photo.jpg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-size: cover;
+        }
+
+        .navbar {
+            height: 100px;
+            background-color: rgb(16, 64, 64);
+            align-items: center;
+        }
+
+    </style>
 </head>
 
-<body
-    style="background-image: url(https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg);font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-
-
+<body>
 
     <div>
-        <nav class="navbar  " style="height: 100px; background-color: rgb(16, 64, 64);">
-            <div class="container-fluid ">
-                <a class="navbar-brand ms-5 " style="color: aqua; font-size: larger;" href="#">WEATHER TODAY</a>
-                <i class="fa-solid fa-cloud fa-2x"></i>
-
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3 ms-sm-5" style="color: aqua; font-size: larger;" href="#">WEATHER TODAY</a>
+                <i class="fas fa-cloud fa-2x"></i>
             </div>
         </nav>
     </div>
 
-
-    <div class="container">
+    <div class="container mb-5">
         <div class="row content">
-            <div class="c col-lg-5 col-md-5" id="b">
-                <input type="text" id="sLocation" class="text-dark border rounded w-65 mt-5"
-                    placeholder="Enter Location">
-
+            <div class="col-lg-5 col-md-8 col-sm-10 col-12" id="b">
+                <input type="text" id="sLocation" class="text-light border rounded w-100 mt-5"
+                   placeholder="Enter Location">
             </div>
-            <div class="c col-lg-2 col-md-2" id="b1">
+            <div class="col-lg-2 col-md-4 col-sm-2 col-12" id="b1">
                 <!-- icon -->
-                <button id="sButton" onclick="clickButton()" class=" border rounded mt-5"><i
-                        class="fa-solid fa-magnifying-glass" style="color: #c1bfbf;"></i>
+                <button id="sButton" onclick="clickButton()" class="border rounded mt-5"><i
+                        class="fas fa-search" style="color: #c1bfbf;"></i>
                 </button>
             </div>
-
         </div>
     </div>
 
-
-
-
     <!-- output -->
-
-    <div id="result" class="c1 container  ">
+    <div id="result" class="container mt-5" style="color: wheat;">
         <div class="row p-3">
-
-
-            <div class="col-lg-6 mt-5">
-                <div class="col-lg-6">
-                    <i class="fa-solid fa-cloud fa-4x p-3" style="color: #ffffff;"></i>
-                </div>
+            <div class="col-lg-6">
                 <div class="row p-3">
-                    <div id="a1" class="col-lg-12">
-
-
-
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-6">
+                        <i class="fas fa-cloud fa-4x p-3" style="color: #f7f0f0;"></i>
                     </div>
-                    <div class="row p-3">
-                        <div class="col-lg-12">
-                            <h2 id="a2">Cloudy</h2>
-                        </div>
-
+                    <div class="col-lg-8 col-md-6 col-sm-8 col-6">
+                        <div id="a1"></div>
+                        <h2 id="a2">Cloudy</h2>
                         <div class="row p-2 mt-2">
-                            <div class="col-lg-12">
+                            <div class="col">
                                 <h6>DATE|TIME</h6>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-
             <!-- right section -->
-
-
-            <div class="ca1 col-lg-6  border-black">
+            <div class="col-lg-6 " style="color: wheat;">
                 <div class="row p-3">
                     <div class="col-lg-12">
                         <h4 id="a3">Maximum-Temp :</h4>
                     </div>
-                    <div class="row p-3">
-                        <div class="col">
-                            <h4 id="a4">Minimum-Temp :</h4>
-                        </div>
-                        <div class="row p-3">
-                            <div class="col">
-                                <h4 id="a5">Wind-Speed :</h4>
-                            </div>
-                            <div class="row p-3">
-                                <div class="col">
-                                    <h4 id="a">Pressure :</h4>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-12">
+                        <h4 id="a4">Minimum-Temp :</h4>
+                    </div>
+                    <div class="col-lg-12">
+                        <h4 id="a5">Wind-Speed :</h4>
+                    </div>
+                    <div class="col-lg-12">
+                        <h4 id="a">Pressure :</h4>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
 
+    <script src="./logics.js"></script>
 </body>
-
-
-<script src="./logics.js"></script>
 
 </html>
